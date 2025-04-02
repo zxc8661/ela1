@@ -50,4 +50,14 @@ class PostDocService(
     private fun genNextId(): String {
         return TsidCreator.getTsid().toString()
     }
+
+    fun findByOrderByIdDesc(): List<PostDoc> {
+        return postDocRepository
+            .findByOrderByIdDesc()
+    }
+
+    fun findByOrderByIdAsc(): List<PostDoc> {
+        return postDocRepository
+            .findByOrderByIdAsc()
+    }
 }
