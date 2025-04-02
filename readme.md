@@ -23,3 +23,19 @@
   - 인덱스 매핑 정보 출력
 - http://localhost:9200/app1_posts/_search
   - 인덱스 검색
+
+# 4강
+
+## 제목기준으로 `대학생` 이라는 키워드로 검색
+
+## POSTMAN : ela1/posts/_search
+```
+POST /app1_posts/_search
+{
+  "query": {
+    "match": {
+      "title": "대학생"
+    }
+  }
+}
+```
