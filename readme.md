@@ -8,7 +8,7 @@
 - 엘라스틱 서치 API 주소 : http://localhost:9200
 
 # 3강
-- [커밋](https://github.com/jhs512/kp-2025-04-02/commit/main)
+- [커밋](https://github.com/jhs512/kp-2025-04-02/commit/435d7cf)
 - PostDoc, PostDocRepository, PostDocService 생성
 - BaseInitData 생성
   - PostDoc 인덱스 재생성
@@ -26,16 +26,20 @@
 
 # 4강
 
-## 제목기준으로 `대학생` 이라는 키워드로 검색
+## 제목기준으로 `대학` 이라는 키워드로 검색
 
-## POSTMAN : ela1/posts/_search
+## POSTMAN : ela_1/posts/_search
 ```
-POST /app1_posts/_search
+POST http://localhost:9200/app1_posts/_search
 {
   "query": {
     "match": {
-      "title": "대학생"
+      "title": "대학"
     }
   }
 }
 ```
+
+# 5강
+
+## 
