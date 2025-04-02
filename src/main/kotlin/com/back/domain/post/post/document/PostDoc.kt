@@ -8,7 +8,9 @@ import org.springframework.data.elasticsearch.annotations.Setting
 import java.time.LocalDateTime
 
 @Document(indexName = "app1_posts")
+// 해당 인덱스에 설정을 하는것
 @Setting(settingPath = "/elasticsearch/posts-settings.json")
+
 data class PostDoc(
     @Id
     @Field(type = FieldType.Keyword)

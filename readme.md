@@ -8,7 +8,11 @@
 - 엘라스틱 서치 API 주소 : http://localhost:9200
 
 # 3강
+<<<<<<< HEAD
 - [커밋](https://github.com/jhs512/kp-2025-04-02/commit/435d7cf)
+=======
+- [커밋](https://github.com/jhs512/kp-2025-04-02/commit/e0de6c2)
+>>>>>>> 2283e82dadca35e170f596ee9cfd83e8758a0610
 - PostDoc, PostDocRepository, PostDocService 생성
 - BaseInitData 생성
   - PostDoc 인덱스 재생성
@@ -41,5 +45,10 @@ POST http://localhost:9200/app1_posts/_search
 ```
 
 # 5강
+<<<<<<< HEAD
 
 ## 
+=======
+- [커밋](https://github.com/jhs512/kp-2025-04-02/commit/main)
+- http://localhost:8080/api/v1/posts/search
+>>>>>>> 2283e82dadca35e170f596ee9cfd83e8758a0610

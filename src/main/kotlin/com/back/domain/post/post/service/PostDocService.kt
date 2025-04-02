@@ -1,11 +1,13 @@
 package com.back.domain.post.post.service
 
 import com.back.domain.post.post.document.PostDoc
+import com.back.domain.post.post.dto.PostDto
 import com.back.domain.post.post.repository.PostDocRepository
 import com.github.f4b6a3.tsid.TsidCreator
 import org.springframework.data.elasticsearch.NoSuchIndexException
 import org.springframework.data.elasticsearch.UncategorizedElasticsearchException
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations
+import org.springframework.data.jpa.domain.AbstractPersistable_.id
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 
@@ -50,4 +52,27 @@ class PostDocService(
     private fun genNextId(): String {
         return TsidCreator.getTsid().toString()
     }
+
+    fun findByOrderByIdDesc(): List<PostDoc> {
+        return postDocRepository
+            .findByOrderByIdDesc()
+    }
+
+    fun findByOrderByIdAsc(): List<PostDoc> {
+        return postDocRepository
+            .findByOrderByIdAsc()
+    }
+
+    fun findById(id: String): PostDoc {
+        return postDocRepository
+            .findById(id).get()
+
+    }
+
+    fun findByKw(kw: String): List<PostDoc> {
+        return postDocRepository.findByKw(kw,kw)
+
+    }
+
+
 }
