@@ -1,0 +1,6 @@
+# 기본
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+
+# 메모리 설정
+bootstrap.memory_lock: true
